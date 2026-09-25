@@ -1,0 +1,60 @@
+[
+  {
+    "url": "https://cdn.pagesmith.app/76bad936/images/limemedia-768.webp",
+    "altText": "",
+    "context": "-",
+    "isLogo": true,
+    "originalWidth": 794,
+    "originalHeight": 392,
+    "variants": [
+      {
+        "url": "https://cdn.pagesmith.app/76bad936/images/limemedia-768.webp",
+        "width": 768
+      },
+      {
+        "url": "https://cdn.pagesmith.app/76bad936/images/limemedia-640.webp",
+        "width": 640
+      },
+      {
+        "url": "https://cdn.pagesmith.app/76bad936/images/limemedia-320.webp",
+        "width": 320
+      }
+    ]
+  },
+  {
+    "url": "https://cdn.pagesmith.app/76bad936/images/limemedia-768x379-768.webp",
+    "altText": "",
+    "context": "Firecrawl image extraction",
+    "isLogo": false,
+    "originalWidth": 768,
+    "originalHeight": 379,
+    "variants": [
+      {
+        "url": "https://cdn.pagesmith.app/76bad936/images/limemedia-768x379-768.webp",
+        "width": 768
+      },
+      {
+        "url": "https://cdn.pagesmith.app/76bad936/images/limemedia-768x379-640.webp",
+        "width": 640
+      },
+      {
+        "url": "https://cdn.pagesmith.app/76bad936/images/limemedia-768x379-320.webp",
+        "width": 320
+      }
+    ]
+  },
+  {
+    "url": "https://cdn.pagesmith.app/76bad936/images/limemedia-300x148-300.webp",
+    "altText": "",
+    "context": "Firecrawl image extraction",
+    "isLogo": false,
+    "originalWidth": 300,
+    "originalHeight": 148,
+    "variants": [
+      {
+        "url": "https://cdn.pagesmith.app/76bad936/images/limemedia-300x148-300.webp",
+        "width": 300
+      }
+    ]
+  }
+]

@@ -1,0 +1,39 @@
+---
+// Contact section with background image and form
+---
+
+<section id="contact" class="relative py-24 bg-cover bg-center" style="background-image: url('https://limemedia.co.za/wp-content/uploads/2022/01/contactus.jpg');" data-ps="src/components/home/Contact.astro:contact-sec">
+  <div class="absolute inset-0 bg-white/95" data-ps="src/components/home/Contact.astro:overlay"></div>
+  
+  <div class="relative z-10 max-w-3xl mx-auto px-6 text-center flex flex-col items-center gap-6" data-ps="src/components/home/Contact.astro:container">
+    <div class="text-primary mb-2" data-ps="src/components/home/Contact.astro:icon">
+      <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+      </svg>
+    </div>
+    
+    <h2 class="text-[40px] font-normal m-0" data-ps="src/components/home/Contact.astro:title">
+      <span class="text-accent" data-ps="src/components/home/Contact.astro:d4imgc">Get In Touch</span> With Us
+    </h2>
+
+    <form class="w-full flex flex-col gap-4 text-left mt-8" data-ps="src/components/home/Contact.astro:form">
+      <input type="text" placeholder="Name" class="p-4 border border-border bg-white text-sm outline-none focus:border-primary transition-colors" required data-ps="src/components/home/Contact.astro:name" />
+      <input type="email" placeholder="Email Address" class="p-4 border border-border bg-white text-sm outline-none focus:border-primary transition-colors" required data-ps="src/components/home/Contact.astro:email" />
+      <input type="tel" placeholder="Contact Number" class="p-4 border border-border bg-white text-sm outline-none focus:border-primary transition-colors" required data-ps="src/components/home/Contact.astro:tel" />
+      <textarea placeholder="Message" rows="6" class="p-4 border border-border bg-white text-sm outline-none focus:border-primary transition-colors resize-none" required data-ps="src/components/home/Contact.astro:msg"></textarea>
+      
+      <!-- Mock CAPTCHA -->
+      <div class="bg-surface p-4 border border-border flex items-center justify-between" data-ps="src/components/home/Contact.astro:captcha">
+        <div class="flex items-center gap-3" data-ps="src/components/home/Contact.astro:1ijz2e">
+          <input type="checkbox" id="robot" class="w-6 h-6 border-border rounded-none" />
+          <label for="robot" class="text-sm font-normal text-foreground" data-ps="src/components/home/Contact.astro:lknwal">I'm not a robot</label>
+        </div>
+        <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA" class="h-8 w-8" data-ps="src/components/home/Contact.astro:scozkv" />
+      </div>
+
+      <button type="submit" class="bg-primary text-white py-4 uppercase text-[15px] font-normal border-none cursor-pointer hover:bg-primary-hover transition-colors" data-ps="src/components/home/Contact.astro:btn">
+        SUBMIT
+      </button>
+    </form>
+  </div>
+</section>

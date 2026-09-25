@@ -1,0 +1,109 @@
+{
+  "success": true,
+  "url": "https://limemedia.co.za",
+  "structured": {
+    "title": "Lime Media Agency - Google Ads | Social & Lead Generation",
+    "description": "Lime Media is a digital agency that specialises in Google Ads, Social and lead generation.",
+    "url": "https://limemedia.co.za",
+    "imageCount": 16,
+    "branding": {
+      "colors": {
+        "primary": "#008FFF",
+        "secondary": "#CE271B",
+        "accent": "#9ED51E",
+        "background": "#FFFFFF",
+        "textPrimary": "#000000",
+        "link": "#8656C1"
+      },
+      "typography": {
+        "fontFamilies": {
+          "primary": "Muli",
+          "heading": "Poppins"
+        },
+        "fontStacks": {
+          "heading": [
+            "Poppins"
+          ],
+          "body": [
+            "Muli"
+          ],
+          "paragraph": [
+            "Poppins"
+          ]
+        },
+        "fontSizes": {
+          "h1": "55px",
+          "h2": "55px",
+          "body": "18px"
+        }
+      },
+      "spacing": {
+        "baseUnit": 4,
+        "borderRadius": "5px"
+      },
+      "logo": "https://limemedia.co.za/wp-content/uploads/2022/01/limemedia.png",
+      "favicon": "https://limemedia.co.za/wp-content/uploads/2022/09/limemedia.png"
+    },
+    "pages": [
+      {
+        "slug": "index",
+        "path": "/",
+        "title": "Lime Media Agency - Google Ads | Social & Lead Generation",
+        "file": "data/pages/index.md"
+      }
+    ],
+    "availablePages": [
+      {
+        "path": "/google-ads/confirmation/",
+        "label": "Confirmation - Lime Media",
+        "slug": "google-ads-confirmation",
+        "scraped": false
+      },
+      {
+        "path": "/social/",
+        "label": "Social - Lime Media",
+        "slug": "social",
+        "scraped": false
+      },
+      {
+        "path": "/privacy-policy/",
+        "label": "Privacy Policy - Lime Media",
+        "slug": "privacy-policy",
+        "scraped": false
+      },
+      {
+        "path": "/services/",
+        "label": "Services - Lime Media",
+        "slug": "services",
+        "scraped": false
+      },
+      {
+        "path": "/lead-generation/",
+        "label": "Lead Generation - Lime Media",
+        "slug": "lead-generation",
+        "scraped": false
+      },
+      {
+        "path": "/consulting/",
+        "label": "Consulting - Lime Media",
+        "slug": "consulting",
+        "scraped": false
+      },
+      {
+        "path": "/google-ads/",
+        "label": "Google Ads - Lime Media",
+        "slug": "google-ads",
+        "scraped": false
+      }
+    ]
+  },
+  "metadata": {
+    "scraper": "firecrawl-crawl-endpoint",
+    "timestamp": "2026-04-03T03:34:04.520Z",
+    "homepageContentLength": 1297,
+    "imageCount": 16,
+    "hasBranding": true,
+    "pagesDiscovered": 7,
+    "pagesScraped": 1
+  }
+}

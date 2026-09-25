@@ -1,0 +1,30 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Hero from '@/components/home/Hero.astro';
+import About from '@/components/home/About.astro';
+import Services from '@/components/home/Services.astro';
+import Clients from '@/components/home/Clients.astro';
+import Contact from '@/components/home/Contact.astro';
+import { SITE } from '@/config/site';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": SITE.name,
+  "description": SITE.description,
+  "url": SITE.url,
+  "logo": "https://limemedia.co.za/wp-content/uploads/2022/01/limemedia.png"
+};
+---
+
+<BaseLayout 
+  title={SITE.title}
+  description={SITE.description}
+  jsonLd={jsonLd}
+>
+  <Hero />
+  <About />
+  <Services />
+  <Clients />
+  <Contact />
+</BaseLayout>

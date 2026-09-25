@@ -1,0 +1,19 @@
+---
+// Hero section with background and lime green horizontal bars
+---
+
+<section id="hero" class="relative py-32 flex items-center justify-center text-center bg-cover bg-center" style="background-image: url('https://limemedia.co.za/wp-content/uploads/2022/01/architecture-featured.jpg');" data-ps="src/components/home/Hero.astro:hero-sec">
+  <div class="absolute inset-0 bg-white/90" data-ps="src/components/home/Hero.astro:overlay"></div>
+  
+  <div class="relative z-10 max-w-4xl mx-auto px-6 flex flex-col items-center gap-6" data-ps="src/components/home/Hero.astro:content">
+    <div class="w-full h-1 bg-primary mb-2" data-ps="src/components/home/Hero.astro:bar-top"></div>
+    <h1 class="text-[55px] font-normal leading-tight m-0" data-ps="src/components/home/Hero.astro:title">
+      <span class="text-accent" data-ps="src/components/home/Hero.astro:3f6ipc">Not A Traditional</span> Agency
+    </h1>
+    <div class="w-full h-1 bg-primary mt-2" data-ps="src/components/home/Hero.astro:bar-bottom"></div>
+    
+    <p class="text-[18px] font-light text-foreground max-w-2xl mx-auto mt-4" data-ps="src/components/home/Hero.astro:desc">
+      We are not your traditional media agency. We are a results driven company who focuses on getting our clients more customers at lower costs.
+    </p>
+  </div>
+</section>
