@@ -1,0 +1,26 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import GoogleAdsHero from '@/components/google-ads/GoogleAdsHero.astro';
+import GoogleAds from '@/components/google-ads/GoogleAds.astro';
+import GoogleAdsCert from '@/components/google-ads/GoogleAdsCert.astro';
+import { SITE } from '@/config/site';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Google Ads - Lime Media",
+  "description": "Skyrocket Your Sales With Google Ads Your ideal customer is on Google and so is your competition. We can create laser targeted Google Ad campaigns that will flood your business with new profitable clients. Most agencies focus on traffic while we focus on results.",
+  "url": SITE.url,
+  "logo": "https://limemedia.co.za/wp-content/uploads/2022/01/limemedia.png"
+};
+---
+
+<BaseLayout 
+  title={SITE.title}
+  description={SITE.description}
+  jsonLd={jsonLd}
+>
+  <GoogleAdsHero />
+  <GoogleAds />
+  <GoogleAdsCert />
+</BaseLayout>
