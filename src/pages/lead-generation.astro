@@ -1,0 +1,34 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import LeadGHero from '@/components/lead-generation/Hero.astro';
+import LeadGAbout from '@/components/lead-generation/About.astro';
+import LeadGServices from '@/components/lead-generation/Services.astro';
+import LeadGAdvertising from '@/components/lead-generation/Advertising.astro';
+import LeadGClients from '@/components/lead-generation/Clients.astro';
+import LeadGDigital from '@/components/lead-generation/Digital.astro';
+import LeadGContact from '@/components/lead-generation/Contact.astro';
+import { SITE } from '@/config/site';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Lead Generation - Lime Media",
+  "description": "We provide a steady stream of highly relevant contextual inbound leads to our clients.",
+  "url": SITE.url,
+  "logo": "https://limemedia.co.za/wp-content/uploads/2022/01/limemedia.png"
+};
+---
+
+<BaseLayout 
+  title={SITE.title}
+  description={SITE.description}
+  jsonLd={jsonLd}
+>
+  <LeadGHero />
+  <LeadGAbout />
+  <LeadGServices />
+  <LeadGAdvertising />
+  <LeadGClients />
+  <LeadGDigital />
+  <LeadGContact />
+</BaseLayout>

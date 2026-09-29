@@ -1,0 +1,150 @@
+---
+// Contact section with background image and form
+---
+
+<section 
+  id="contact" 
+  class="relative py-24 bg-cover bg-center" 
+  style="background-image: url('/img/contactus.jpg');"
+>
+  <div class="absolute inset-0 bg-white/95"></div>
+  
+  <div class="relative z-10 max-w-4xl mx-auto px-6 text-center flex flex-col items-center gap-1">
+    <div class="text-primary mb-2">
+      <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+      </svg>
+    </div>
+    
+    <h2 class="text-[30px] md:text-[40px] text-black font-semibold m-0">
+      <span class="text-primary">Get In Touch</span> With Us
+    </h2>
+
+    <form 
+      id="contact-form"
+      class="
+        w-full md:w-lg 
+        flex flex-col gap-4 
+        text-left 
+        mt-8
+      "
+    >
+      <input 
+        type="text" 
+        placeholder="Name" 
+        class="
+          p-4 
+          border border-[#cccccc] outline-none focus:border-primary
+          bg-white 
+          text-[16px] font-normal
+          transition-colors 
+          placeholder:text-gray-400
+        " 
+        required 
+      />
+
+      <input 
+        type="email" 
+        placeholder="Email Address" 
+        class="
+          p-4 
+          border border-[#cccccc] outline-none focus:border-primary
+          bg-white 
+          text-[16px] font-normal
+          transition-colors 
+          placeholder:text-gray-400
+        " 
+        required 
+      />
+
+      <input 
+        type="tel" 
+        placeholder="Contact Number" 
+        class="
+          p-4 
+          border border-[#cccccc] outline-none focus:border-primary
+          bg-white 
+          text-[16px] font-normal
+          transition-colors 
+          placeholder:text-gray-400
+        " 
+        required 
+      />
+
+      <textarea 
+        placeholder="Message" 
+        rows="6" 
+        class="
+          p-4 
+          border border-[#cccccc] outline-none focus:border-primary
+          bg-white 
+          text-[16px] font-normal
+          transition-colors 
+          placeholder:text-gray-400
+          resize-none
+        " 
+        required>
+      </textarea>
+
+      <button 
+        type="submit" 
+        class="
+          bg-primary 
+          text-white 
+          py-4 
+          uppercase 
+          text-[18px] font-semibold 
+          border-none 
+          cursor-pointer 
+          hover:bg-primary-hover 
+          transition-colors
+        "
+      >
+        SUBMIT
+      </button>
+
+      <!-- Success message -->
+      <div
+        id="form-success"
+        class="hidden p-4 bg-green-100 border border-green-300 text-green-700 text-center"
+        role="alert"
+      >
+        Thank you! Your message has been sent successfully.
+      </div>      
+    </form>
+  </div>
+</section>
+
+<script is:inline>
+  const form = document.querySelector("#contact-form");
+  const successMessage = document.querySelector("#form-success");
+
+  form?.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const button = form.querySelector('button[type="submit"]');
+
+    if (button) {
+      button.disabled = true;
+      button.textContent = "SENDING...";
+    }
+
+    try {
+      // Your form submission/API request goes here
+
+      // For now, simulate a successful submission
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      form.reset();
+      successMessage?.classList.remove("hidden");
+
+    } catch (error) {
+      console.error("Form submission failed:", error);
+    } finally {
+      if (button) {
+        button.disabled = false;
+        button.textContent = "SUBMIT";
+      }
+    }
+  });
+</script>
