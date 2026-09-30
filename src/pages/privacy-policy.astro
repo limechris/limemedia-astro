@@ -1,0 +1,24 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PPHero from '@/components/privacy-policy/PPHero.astro';
+import PP from '@/components/privacy-policy/PP.astro'
+import { SITE } from '@/config/site';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Services - Lime Media",
+  "description": "At Lime Media, we offer the following services: Lead Generation, Social, Google Ads and Consulting",
+  "url": SITE.url,
+  "logo": "https://limemedia.co.za/wp-content/uploads/2022/01/limemedia.png"
+};
+---
+
+<BaseLayout 
+  title={SITE.title}
+  description={SITE.description}
+  jsonLd={jsonLd}
+>
+  <PPHero />
+  <PP />
+</BaseLayout>
