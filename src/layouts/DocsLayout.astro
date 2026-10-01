@@ -46,26 +46,25 @@ const docsBySection = sortedDocs.reduce((acc, doc) => {
       }}
     />
   </head>
-  <body class="min-h-screen bg-background text-foreground" data-ps="src/layouts/DocsLayout.astro:r1mhqx">
+  <body class="min-h-screen bg-background text-foreground">
     <Navigation />
 
-    <div class="container mx-auto flex px-4 pb-8 pt-[var(--nav-height)]" data-ps="src/layouts/DocsLayout.astro:upiaa4">
+    <div class="container mx-auto flex px-4 pb-8 pt-[var(--nav-height)]">
       <!-- Sidebar Navigation -->
-      <aside class="hidden w-64 shrink-0 pr-8 lg:block" data-ps="src/layouts/DocsLayout.astro:4fgao7">
-        <nav class="sticky top-24" data-ps="src/layouts/DocsLayout.astro:86mz6j">
-          <h2 class="mb-4 text-sm font-semibold uppercase text-muted-foreground" data-ps="src/layouts/DocsLayout.astro:jauq3x">Documentation</h2>
+      <aside class="hidden w-64 shrink-0 pr-8 lg:block">
+        <nav class="sticky top-24">
+          <h2 class="mb-4 text-sm font-semibold uppercase text-muted-foreground">Documentation</h2>
           {Object.entries(docsBySection).map(([section, docs], __psIdx) => (
-            <div class="mb-6" data-ps={`src/layouts/DocsLayout.astro:upiaa5-${docs]}`}>
+            <div class="mb-6">
               {section !== 'Documentation' && (
-                <h3 class="mb-2 text-sm font-semibold text-foreground" data-ps={`src/layouts/DocsLayout.astro:ff54ij-${docs]}`}>{section}</h3>
+                <h3 class="mb-2 text-sm font-semibold text-foreground">{section}</h3>
               )}
               <ul class="space-y-2">
                 {docs.map((doc, __psIdx) => (
-                  <li data-ps={`src/layouts/DocsLayout.astro:uuiy8o-${__psIdx}`}>
+                  <li>
                     <a
                       href={`/docs/${doc.id}`}
-                      class="block rounded px-3 py-1.5 text-sm transition-opacity opacity-70 hover:opacity-100"
-                     data-ps={`src/layouts/DocsLayout.astro:ldu2n-${__psIdx}`}>
+                      class="block rounded px-3 py-1.5 text-sm transition-opacity opacity-70 hover:opacity-100">
                       {doc.data.title}
                     </a>
                   </li>
@@ -77,18 +76,17 @@ const docsBySection = sortedDocs.reduce((acc, doc) => {
       </aside>
 
       <!-- Main Content -->
-      <main class="min-w-0 flex-1" data-ps="src/layouts/DocsLayout.astro:po35e8">
+      <main class="min-w-0 flex-1">
         <article
           class="max-w-3xl"
           data-mdx-file={mdxFilePath}
-          data-mdx-type="docs"
-         data-ps="src/layouts/DocsLayout.astro:5e6nr3">
-          <header class="mb-8" data-ps="src/layouts/DocsLayout.astro:jo1w2">
-            <h1 class="mb-2 text-4xl md:text-5xl font-bold" data-ps="src/layouts/DocsLayout.astro:jrwd8u">{frontmatter.title}</h1>
-            <p class="text-lg text-muted-foreground" data-ps="src/layouts/DocsLayout.astro:7pbqsg">{frontmatter.description}</p>
+          data-mdx-type="docs">
+          <header class="mb-8">
+            <h1 class="mb-2 text-4xl md:text-5xl font-bold">{frontmatter.title}</h1>
+            <p class="text-lg text-muted-foreground">{frontmatter.description}</p>
           </header>
 
-          <div class="prose prose-lg max-w-none" data-ps="src/layouts/DocsLayout.astro:upiaa6">
+          <div class="prose prose-lg max-w-none">
             <slot />
           </div>
         </article>

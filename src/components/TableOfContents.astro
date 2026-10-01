@@ -17,15 +17,14 @@ const tocHeadings = headings.filter(h => h.depth >= 2 && h.depth <= 3);
 ---
 
 {tocHeadings.length > 2 && (
-  <nav class="toc not-prose mb-8 rounded-lg border border-border p-6 bg-surface" data-ps="src/components/TableOfContents.astro:o5wlsh">
-    <p class="mb-4 text-lg font-bold text-foreground" data-ps="src/components/TableOfContents.astro:4spl90">{title}</p>
+  <nav class="toc not-prose mb-8 rounded-lg border border-border p-6 bg-surface">
+    <p class="mb-4 text-lg font-bold text-foreground">{title}</p>
     <ul class="space-y-2 text-sm">
       {tocHeadings.map((heading, __psIdx) => (
-        <li class={heading.depth === 3 ? 'ml-4' : ''} data-ps={`src/components/TableOfContents.astro:opdb14-${__psIdx}`}>
+        <li class={heading.depth === 3 ? 'ml-4' : ''}>
           <a
             href={`#${heading.slug}`}
-            class={`block py-1 transition-colors hover:underline ${heading.depth === 2 ? 'text-foreground font-semibold' : 'text-muted-foreground'}`}
-           data-ps={`src/components/TableOfContents.astro:50yt9t-${__psIdx}`}>
+            class={`block py-1 transition-colors hover:underline ${heading.depth === 2 ? 'text-foreground font-semibold' : 'text-muted-foreground'}`}>
             {heading.text}
           </a>
         </li>

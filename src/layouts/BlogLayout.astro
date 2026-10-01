@@ -124,22 +124,21 @@ if (schemaType === 'Recipe' && schemaData) {
       jsonLd={jsonLd}
     />
   </head>
-  <body class="min-h-screen bg-background text-foreground" data-ps="src/layouts/BlogLayout.astro:rqzn4e">
+  <body class="min-h-screen bg-background text-foreground">
     <Navigation />
 
     <article
       class="container mx-auto max-w-3xl px-4 pb-12 pt-[var(--nav-height)]"
       data-mdx-file={mdxFilePath}
-      data-mdx-type="blog"
-     data-ps="src/layouts/BlogLayout.astro:xkhs7t">
-      <header class="mb-8" data-ps="src/layouts/BlogLayout.astro:fqly22">
+      data-mdx-type="blog">
+      <header class="mb-8">
         {frontmatter.featured && (
-          <span class="inline-block mb-4 px-3 py-1 text-xs font-semibold rounded-full bg-primary text-primary-foreground" data-ps="src/layouts/BlogLayout.astro:9v2262">
+          <span class="inline-block mb-4 px-3 py-1 text-xs font-semibold rounded-full bg-primary text-primary-foreground">
             Featured
           </span>
         )}
-        <h1 class="mb-4 text-4xl md:text-5xl font-bold" data-ps="src/layouts/BlogLayout.astro:sihpnr">{frontmatter.title}</h1>
-        <div class="flex flex-wrap items-center gap-4 text-sm text-muted-foreground" data-ps="src/layouts/BlogLayout.astro:o33ul8">
+        <h1 class="mb-4 text-4xl md:text-5xl font-bold">{frontmatter.title}</h1>
+        <div class="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
           {frontmatter.pubDate && (
             <time datetime={frontmatter.pubDate.toISOString()}>
               {frontmatter.pubDate.toLocaleDateString('en-US', {
@@ -150,8 +149,8 @@ if (schemaType === 'Recipe' && schemaData) {
             </time>
           )}
           {frontmatter.updatedDate && (
-            <span class="flex items-center gap-1" data-ps="src/layouts/BlogLayout.astro:9v2263">
-              <span data-ps="src/layouts/BlogLayout.astro:9v2264">Updated:</span>
+            <span class="flex items-center gap-1">
+              <span>Updated:</span>
               <time datetime={frontmatter.updatedDate.toISOString()}>
                 {frontmatter.updatedDate.toLocaleDateString('en-US', {
                   year: 'numeric',
@@ -161,22 +160,22 @@ if (schemaType === 'Recipe' && schemaData) {
               </time>
             </span>
           )}
-          {frontmatter.author && <span data-ps="src/layouts/BlogLayout.astro:9v2265">by {frontmatter.author}</span>}
+          {frontmatter.author && <span>by {frontmatter.author}</span>}
           {frontmatter.category && (
-            <span class="rounded-full px-3 py-1 bg-surface text-foreground" data-ps="src/layouts/BlogLayout.astro:9v2266">
+            <span class="rounded-full px-3 py-1 bg-surface text-foreground">
               {frontmatter.category}
             </span>
           )}
           {frontmatter.readingTime && (
-            <span data-ps="src/layouts/BlogLayout.astro:9v2267">{frontmatter.readingTime}</span>
+            <span>{frontmatter.readingTime}</span>
           )}
         </div>
         {frontmatter.series && (
-          <div class="mt-4 p-3 rounded-lg bg-surface" data-ps="src/layouts/BlogLayout.astro:o33ul7">
-            <span class="text-muted-foreground" data-ps="src/layouts/BlogLayout.astro:9v2268">Part of series: </span>
-            <span class="font-medium" data-ps="src/layouts/BlogLayout.astro:9v2269">{frontmatter.series}</span>
+          <div class="mt-4 p-3 rounded-lg bg-surface">
+            <span class="text-muted-foreground">Part of series: </span>
+            <span class="font-medium">{frontmatter.series}</span>
             {frontmatter.seriesOrder && (
-              <span class="text-muted-foreground" data-ps="src/layouts/BlogLayout.astro:9v226a"> (Part {frontmatter.seriesOrder})</span>
+              <span class="text-muted-foreground"> (Part {frontmatter.seriesOrder})</span>
             )}
           </div>
         )}
@@ -188,19 +187,19 @@ if (schemaType === 'Recipe' && schemaData) {
             src={frontmatter.image}
             alt={frontmatter.imageAlt || frontmatter.title}
             class="w-full rounded-lg md:rounded-xl object-cover"
-            style="max-height: 500px;" data-ps="src/layouts/BlogLayout.astro:h2r8qk" />
+            style="max-height: 500px;" />
         </figure>
       )}
 
-      <div class="prose prose-lg max-w-none" data-ps="src/layouts/BlogLayout.astro:o33ul6">
+      <div class="prose prose-lg max-w-none">
         <slot />
       </div>
 
       {frontmatter.tags && frontmatter.tags.length > 0 && (
-        <footer class="mt-12 pt-8 border-t border-border" data-ps="src/layouts/BlogLayout.astro:fydg89">
-          <div class="flex flex-wrap gap-2" data-ps="src/layouts/BlogLayout.astro:o33ul5">
+        <footer class="mt-12 pt-8 border-t border-border">
+          <div class="flex flex-wrap gap-2">
             {frontmatter.tags.map((tag, __psIdx) => (
-              <span class="rounded-md px-3 py-1 text-sm bg-surface text-muted-foreground" data-ps={`src/layouts/BlogLayout.astro:dfgz5m-${__psIdx}`}>
+              <span class="rounded-md px-3 py-1 text-sm bg-surface text-muted-foreground">
                 #{tag}
               </span>
             ))}
